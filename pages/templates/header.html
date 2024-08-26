@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/w3.css">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/861eff2488.js" crossorigin="anonymous"></script>
+<style>
+body {font-family: "Ubuntu", sans-serif}
+
+body, html {
+  height: 100%;
+  color: #3b1d1d;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-clip: content-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top 25px;
+  background-image: url("/images/building.jpeg");
+  min-height: 95%;
+}
+
+@media (max-width: 700px) {
+  .bgimg-1 { /* Reset background size for small screens */
+    /* background-position: center center; */
+    background-size: cover;
+    background-image: url("/images/mobile_building.jpeg");
+  }
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+
+a {
+  text-decoration: none; /* Remove underline from all anchor elements */
+}
+
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="/index.html" class="w3-bar-item w3-button"><i class="fa fa-home"></i> WHO</a>
+    <!-- Right-sided navbar links -->
+     <div class="w3-right w3-hide-small">
+        <a href="/pages/tabs/about_page.html" class="w3-bar-item w3-button"><i class="fa fa-info-circle"></i> About Us</a>
+        <a href="/pages/tabs/science_page.html" class="w3-bar-item w3-button"><i class="fa solid fa-file-pen"></i>Science</a>
+        <a href="/pages/tabs/gallery_page.html" class="w3-bar-item w3-button"><i class="fa solid fa-images"></i> Gallery</a>
+        <a href="/pages/tabs/weather_station_page.html" class="w3-bar-item w3-button"><i class="fa solid fa-cloud-moon"></i> Weather Station</a>
+        <a href="https://warwickastrosoc.wordpress.com/" class="w3-bar-item w3-button"><i class="fa-solid fa-user-astronaut"></i> Astronomy Society</a>
+        <a href="/pages/tabs/contact_page.html" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contact Us</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa solic fa-list"></i>
+    </a>
+  </div>
+</div>
+
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="/pages/tabs/about_page.html" onclick="w3_close()" class="w3-bar-item w3-button">About Us</a>
+  <a href="/pages/tabs/science_page.html" onclick="w3_close()" class="w3-bar-item w3-button">Science</a>
+  <a href="/pages/tabs/gallery_page.html" onclick="w3_close()" class="w3-bar-item w3-button">Gallery</a>
+  <a href="/pages/tabs/weather_station_page.html" onclick="w3_close()" class="w3-bar-item w3-button">Weather Station</a>
+  <a href="https://warwickastrosoc.wordpress.com/" target="_blank" onclick="w3_close()" class="w3-bar-item w3-button">Astronomy Society</a>
+  <a href="/pages/tabs/contact_page.html" onclick="w3_close()" class="w3-bar-item w3-button">Contact Us</a>
+</nav>
+
+<script>
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+
+</script>
+
